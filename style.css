@@ -1,0 +1,174 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Segoe UI", system-ui, sans-serif;
+            background:
+                radial-gradient(circle at top, #1f2933, #020617),
+                linear-gradient(120deg, #0ea5e9, #9333ea);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            width: 90%;
+            max-width: 1100px;
+            animation: pageIn 1.4s ease;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            background: linear-gradient(90deg, #a97742);
+            background-clip: text;   /* Yahi wrong hai yaha per    */
+            color: transparent;
+            animation: glowText 3s infinite alternate;
+
+        }
+
+        .hero p {
+            margin-top: 12px;
+            opacity: 0.85;
+        }
+
+        /* Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card */
+        .project-card {
+            position: relative;
+            padding: 36px 32px;
+            border-radius: 22px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(
+                180deg,
+                rgba(255,255,255,0.15),
+                rgba(255,255,255,0.05)
+            );
+            backdrop-filter: blur(16px);
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.6),
+                inset 0 0 0 1px rgba(255,255,255,0.12);
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
+
+        /* Glow border */
+        .project-card::after {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            background: linear-gradient(120deg, #38bdf8, #c084fc, #22d3ee);
+            opacity: 0;
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        .project-card:hover::after {
+            opacity: 1;
+        }
+
+        /* Shine sweep */
+        .project-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255,255,255,0.5),
+                transparent
+            );
+            transform: translateX(-120%);
+            transition: 0.7s;
+        }
+
+        .project-card:hover::before {
+            transform: translateX(120%);
+        }
+
+        .project-card:hover {
+            transform: translateY(-16px) scale(1.04);
+        }
+
+        /* Project Number */
+        .number {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.08);
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .project-card:hover .number {
+            transform: scale(1.1);
+            color: rgba(255,255,255,0.18);
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #38bdf8, #c084fc);
+            margin-bottom: 18px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        /* Animations */
+        @keyframes pageIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glowText {
+            from {
+                text-shadow: 0 0 10px rgba(56,189,248,0.6);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(192,132,252,0.9);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .number {
+                font-size: 2.5rem;
+            }
+        }
