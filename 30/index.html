@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 30</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 200px;
+      background: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- QUESTION:
+Create a layout with sidebar on left and content on right.
+-->
+
+<!-- EXPLANATION:
+display:flex = row layout
+width = sidebar size
+flex:1 = remaining space
+-->
+
+<div class="container">
+  <div class="sidebar">
+    <h3>Menu</h3>
+    <p>Home</p>
+    <p>About</p>
+  </div>
+
+  <div class="content">
+    <h2>Main Content</h2>
+    <p>This is the right area.</p>
+  </div>
+</div>
+
+</body>
+</html>

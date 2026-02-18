@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 33</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 40px;
+    }
+
+    .progress {
+      width: 300px;
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      width: 70%;
+      background: green;
+      color: white;
+      text-align: center;
+      padding: 5px 0;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- QUESTION:
+Create a progress bar showing 70% completion.
+-->
+
+<!-- EXPLANATION:
+Outer div = full bar
+Inner div = filled part
+width:70% = progress value
+overflow:hidden keeps round shape clean
+-->
+
+<h2>Progress Example</h2>
+
+<div class="progress">
+  <div class="progress-bar">70%</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 16</title>
+
+  <style>
+    .parent {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      border: 2px solid black;
+      margin: 20px;
+    }
+
+    .child {
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      background-color: lightcoral;
+      padding: 10px;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- QUESTION:
+Create a big box and place a small box inside it at a custom position.
+-->
+
+<!-- EXPLANATION:
+relative = parent reference
+absolute = moves according to parent
+top/left = position control
+-->
+
+<h2>Position Example</h2>
+
+<div class="parent">
+  Parent Box
+  <div class="child">Child Box</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 35</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* Button */
+    .openBtn {
+      background: blue;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Modal Box */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      visibility: hidden;
+    }
+
+    .modal-content {
+      background: white;
+      width: 300px;
+      padding: 20px;
+      margin: 100px auto;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Show Modal */
+    #popup:target {
+      visibility: visible;
+    }
+
+    .closeBtn {
+      display: inline-block;
+      margin-top: 10px;
+      color: red;
+      text-decoration: none;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- QUESTION:
+Create a popup modal that opens when clicking a button.
+(No JavaScript, only CSS)
+-->
+
+<!-- EXPLANATION:
+:target = when link id is active
+visibility hidden/visible controls modal
+position fixed covers full screen
+-->
+
+<h2>Modal Popup Example</h2>
+
+<a href="#popup" class="openBtn">Open Popup</a>
+
+<div id="popup" class="modal">
+  <div class="modal-content">
+    <h3>Hello!</h3>
+    <p>This is a CSS popup.</p>
+    <a href="#" class="closeBtn">Close</a>
+  </div>
+</div>
+
+</body>
+</html>

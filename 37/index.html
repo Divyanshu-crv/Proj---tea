@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 37</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 8px solid #ddd;
+      border-top: 8px solid blue;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 40px auto;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- QUESTION:
+Create a circular loading spinner using CSS animation.
+-->
+
+<!-- EXPLANATION:
+border creates circle ring
+border-top color shows spinning effect
+@keyframes spin rotates element
+infinite = continuous loop
+-->
+
+<h2>Loading Spinner</h2>
+
+<div class="loader"></div>
+
+</body>
+</html>

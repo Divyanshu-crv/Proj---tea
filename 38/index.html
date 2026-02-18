@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 38</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .iconBox {
+      position: relative;
+      display: inline-block;
+      font-size: 40px;
+    }
+
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 5px 8px;
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- QUESTION:
+Create a notification badge (like message count) on an icon.
+-->
+
+<!-- EXPLANATION:
+position:relative = parent
+position:absolute = badge position
+border-radius:50% makes circle
+-->
+
+<h2>Notification Badge</h2>
+
+<div class="iconBox">
+  🔔
+  <span class="badge">3</span>
+</div>
+
+</body>
+</html>

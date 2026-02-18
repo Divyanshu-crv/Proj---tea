@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 26</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- QUESTION:
+Create an image gallery with 3 columns and hover zoom effect.
+-->
+
+<!-- EXPLANATION:
+display:grid = grid layout
+grid-template-columns = number of columns
+hover + transform scale = zoom effect
+Put 3–6 images in same folder.
+-->
+
+<h2>Image Gallery</h2>
+
+<div class="gallery">
+  <img src="img1.jpg" alt="">
+  <img src="img2.jpg" alt="">
+  <img src="img3.jpg" alt="">
+</div>
+
+</body>
+</html>

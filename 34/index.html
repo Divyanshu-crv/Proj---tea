@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 34</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 40px;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 5px;
+      border-radius: 5px;
+
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- QUESTION:
+Create a tooltip that shows text when mouse hovers on a word.
+-->
+
+<!-- EXPLANATION:
+position:relative = parent
+position:absolute = tooltip position
+visibility hidden/visible controls show/hide
+:hover triggers visibility
+-->
+
+<h2>Tooltip Example</h2>
+
+<div class="tooltip">
+  Hover Me
+  <span class="tooltiptext">Hello Student!</span>
+</div>
+
+</body>
+</html>
